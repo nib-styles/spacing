@@ -1,0 +1,97 @@
+// Generate inline class names for your elements
+//
+// <div class="actions inset-vert-small">
+//    <button type="submit">Totes click me!</button>
+// </div>
+
+$spacing-base: 10px;
+$spacing-small: 10px;
+$spacing-normal: 20px;
+
+$spacing-sizes: small normal medium large !default;
+$spacing-base: 10px !default;
+
+@function spacing($n) {
+  @return $n * $spacing-base;
+}
+
+.flush {
+  padding: 0;
+  margin: 0;
+}
+
+@for $i from 1 through length($spacing-sizes) {
+  $size: nth($spacing-sizes, $i);
+  // Padding
+  .pad-#{$size} {
+    padding: spacing($i) !important;
+  }
+  .pad-top-#{$size} {
+    padding-top: spacing($i) !important;
+  }
+  .pad-right-#{$size} {
+    padding-right: spacing($i) !important;
+  }
+  .pad-bottom-#{$size} {
+    padding-bottom: spacing($i) !important;
+  }
+  .pad-left-#{$size} {
+    padding-left: spacing($i) !important;
+  }
+  .pad-vert-#{$size} {
+    padding-top: spacing($i) !important;
+    padding-bottom: spacing($i) !important;
+  }
+  .pad-horz-#{$size} {
+    padding-right: spacing($i) !important;
+    padding-left: spacing($i) !important;
+  }
+  // Margin Classes
+  .inset-#{$size} {
+    margin: spacing($i) !important;
+  }
+  .inset-top-#{$size} {
+    margin-top: spacing($i) !important;
+  }
+  .inset-right-#{$size} {
+    margin-right: spacing($i) !important;
+  }
+  .inset-bottom-#{$size} {
+    margin-bottom: spacing($i) !important;
+  }
+  .inset-left-#{$size} {
+    margin-left: spacing($i) !important;
+  }
+  .inset-vert-#{$size} {
+    margin-top: spacing($i) !important;
+    margin-bottom: spacing($i) !important;
+  }
+  .inset-horz-#{$size} {
+    margin-right: spacing($i) !important;
+    margin-left: spacing($i) !important;
+  }
+  // Negative Margin Classes
+  .outset-#{$size} {
+    margin: spacing(-$i) !important;
+  }
+  .outset-top-#{$size} {
+    margin-top: spacing(-$i) !important;
+  }
+  .outset-right-#{$size} {
+    margin-right: spacing(-$i) !important;
+  }
+  .outset-bottom-#{$size} {
+    margin-bottom: spacing(-$i) !important;
+  }
+  .outset-left-#{$size} {
+    margin-left: spacing(-$i) !important;
+  }
+  .outset-vert-#{$size} {
+    margin-top: spacing(-$i) !important;
+    margin-bottom: spacing(-$i) !important;
+  }
+  .outset-horz-#{$size} {
+    margin-right: spacing(-$i) !important;
+    margin-left: spacing(-$i) !important;
+  }
+}
