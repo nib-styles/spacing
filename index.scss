@@ -95,3 +95,27 @@ $spacing-base: 10px !default;
     margin-left: spacing(-$i) !important;
   }
 }
+
+.pad-tiny {
+  padding: 5px !important;
+}
+.pad-top-tiny {
+  padding-top: 5px !important;
+}
+.pad-right-tiny {
+  padding-right: 5px !important;
+}
+.pad-bottom-tiny {
+  padding-bottom: 5px !important;
+}
+.pad-left-tiny {
+  padding-left: 5px !important;
+}
+.pad-vert-tiny {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.pad-horz-tiny {
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+}
